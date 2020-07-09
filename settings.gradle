@@ -1,0 +1,4 @@
+include ':gofun_ad_lottie'
+include ':gofun_ad'
+include ':app'
+rootProject.name = "My Application"

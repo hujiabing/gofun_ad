@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#33141E25"
+    android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="288dp"
+        android:layout_height="355dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp">
+        <com.gvsoft.gofun_ad.view.carousel.AdCarouselView
+            android:id="@+id/banner"
+            android:layout_width="288dp"
+            android:layout_height="355dp"
+      />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@null"
+        android:padding="36dp"
+        android:src="@mipmap/icon_close_homepage_popup" />
+</LinearLayout>

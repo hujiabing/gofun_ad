@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/white"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.gvsoft.gofun_ad.view.banner.AdBannerView
+            android:id="@+id/ad_banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    <com.gvsoft.gofun_ad.view.AdImageView
+        android:id="@+id/iv_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#0f8"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toTopOf="@+id/ad_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/animation_view"
+        app:layout_constraintTop_toBottomOf="@+id/rl_container" />
+
+    <com.gvsoft.gofun_ad.view.AdLottieView
+        android:id="@+id/animation_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_img"
+        app:layout_constraintLeft_toRightOf="@+id/iv_img"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_container" />
+
+    <com.gvsoft.gofun_ad.view.splash.AdSplashView
+        android:id="@+id/ad_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/rl_banner"
+        app:layout_constraintTop_toBottomOf="@+id/iv_img"
+        tools:background="@color/colorAccent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_banner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#521"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/ad_view"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ad_view">
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
